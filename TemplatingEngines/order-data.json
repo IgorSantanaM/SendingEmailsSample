@@ -1,0 +1,35 @@
+{
+	"orderId": "ABC12345",
+	"customerName": "David Evans",
+	"customerEmail": "d.evans@example.com",
+	"shippingAddress": {
+		"addressLine1": "17 Angel Street",
+		"addressLine2": "Harlem",
+		"city": "Umberton",
+		"country": "GB",
+		"postalCode": "U2 1AB"
+	},
+	"shippingCost": 12.99,
+	"items": [
+		{
+			"quantity": 1,
+			"name": "Fender Stratocaster US Player Edition",
+			"unitPrice": 799.00
+		},
+		{
+			"quantity": 2,
+			"name": "VOX AC30 Custom with Celestion Greenback Speakers",
+			"unitPrice": 949.00
+		},
+		{
+			"quantity": 1,
+			"name": "Dunlop EP103 Echoplex Delay Pedal",
+			"unitPrice": 229.00
+		},
+		{
+			"quantity": 3,
+			"name": "Ernie Ball Regular Slinky Guitar Strings",
+			"unitPrice": 7.99
+		}
+	]
+}

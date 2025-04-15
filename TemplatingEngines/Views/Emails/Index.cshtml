@@ -1,0 +1,26 @@
+@using TemplatingEngines.Services
+@model List<Order>
+
+@{
+	ViewBag.Title = "Orders";
+}
+<h1>Order Emails</h1>
+@foreach (var order in Model) {
+	<hr/>
+	<h4>@order.OrderId: @order.CustomerName</h4>
+	<p>
+		Previews:
+		<a asp-controller="Emails" asp-action="StringBuilder" asp-route-id="@order.OrderId">StringBuilder</a>
+		| <a asp-controller="Emails" asp-action="Fluid" asp-route-id="@order.OrderId">Fluid</a>
+		| <a asp-controller="Emails" asp-action="RazorEngine" asp-route-id="@order.OrderId">RazorEngine</a>
+		| <a asp-controller="Emails" asp-action="RazorComponents" asp-route-id="@order.OrderId">Razor Component</a>
+		| <a asp-controller="Emails" asp-action="Mjml" asp-route-id="@order.OrderId">MJML</a>
+	</p>
+	<form asp-controller="Emails" asp-action="Send" method="post">
+		<input type="hidden" name="id" value="@order.OrderId"/>
+		Bcc: <input type="email" name="bcc" value="alice@example.com" placeholder="email"/>
+		<select name="renderer" asp-items="Html.GetEnumSelectList<HtmlRenderer>()">
+		</select>
+		<input type="submit" value="Send"/>
+	</form>
+}
