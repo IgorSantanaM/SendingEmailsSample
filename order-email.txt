@@ -1,0 +1,25 @@
+Hi David Evans
+
+Thanks for ordering from Ray's Music Exchange.
+
+Your order's being picked and will be shipped as soon as it's ready.
+
+Order #: AB123
+
+Track your order at https://raysmusic.exchange/orders/AB123
+
+Order Summary
+
+Item                                         Qty       Price       Total
+------------------------------------------------------------------------
+Fender Stratocaster US Player Edition          1  GBP 799.00  GBP 799.00
+VOX AC30 Custom with Celestion Greenback
+  Speakers                                     2  GBP 949.00 GBP 1898.00
+Dunlop EP103 Echoplex Delay Pedal              1  GBP 229.00  GBP 229.00
+Ernie Ball Regular Slinky Guitar Strings       3    GBP 7.99   GBP 23.97
+------------------------------------------------------------------------
+Subtotal                                                     GBP 2949.97
+VAT Sales Tax @ 20%                                           GBP 589.99
+Shipping                                                       GBP 12.99
+------------------------------------------------------------------------
+Total                                                        GBP 3552.95

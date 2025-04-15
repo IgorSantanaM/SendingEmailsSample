@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Order Confirmation</title>
+</head>
+<body>
+<p>Hi {{ CustomerName }},</p>
+<p>Thanks for ordering from Ray's Music Exchange.</p>
+<p>Your order's being picked and will be shipped as soon as it's ready.</p>
+<p>Order #: {{ OrderId }}</p>
+<p>Track your order at
+	<a href="https://raysmusic.exchange/orders/{{ OrderId }}">https://raysmusic.exchange/orders/{{ OrderId }}</a>
+</p>
+</body>
+</html>
