@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="https://raysmusic.exchange/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <img id="logotype" src="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.svg" alt="Ray's Music Exchange" />
+        <h1>Order Confirmation</h1>
+    </header>
+    <main>
+        <p>Hi @Model.CustomerName,</p>
+        <p>
+            Thanks for ordering from Ray's Music Exchange. Your order's being picked and
+            will be shipped as soon as it's ready.
+        </p>
+        <p><strong>Order #: @Model.OrderId</strong></p>
+        <p>To track the status of your order, <a href="google.com">click here</a>.</p>
+        <h2>Order Summary</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th class="price">Unit Price</th>
+                <th class="price">Total</th>
+            </tr>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td> @item.Name</td>
+                    <td> @item.Quantity</td>
+                    <td class="price">£@item.UnitPrice.ToString("0.00")</td>
+                    <td class="price">£@item.Total.ToString("0.00")</td>
+                </tr>
+            }
+            <tr class="subtotal">
+                <td colspan="3">Subtotal</td>
+                <td class="price">£ @Model.Subtotal.ToString("0.00") </td>
+            </tr>
+            <tr>
+                <td colspan="3">VAT Sales Tax @@ 20%</td>
+                <td class="price">£@Model.TaxAmount.ToString("0.00") </td>
+            </tr>
+            <tr>
+                <td colspan="3">Shipping</td>
+                <td class="price">£@Model.ShippingCost.ToString("0.00") </td>
+            </tr>
+            <tr class="total">
+                <td colspan="3">Total</td>
+                <td class="price">£@Model.TotalCost.ToString("0.00") </td>
+            </tr>
+        </table>
+        <p>
+            <strong>Paid by credit card - thank you!</strong>
+        </p>
+        <p>Any questions or problems with your order, just reply to this email.</p>
+        <p>Thanks, and have a great day.</p>
+        <p><em>Ray's Music Exchange</em></p>
+    </main>
+    <footer>
+        <h4>Ray's Music Exchange • London • Berlin • Calumet City</h4>
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">FAQ </a>
+            <a href="#">Delivery</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </nav>
+
+    </footer>
+</body>
+</html>

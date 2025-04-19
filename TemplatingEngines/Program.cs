@@ -1,8 +1,19 @@
+using RazorEngine.Templating;
+using TemplatingEngines.Services;
+
 var builder = WebApplication.CreateBuilder(args);
-
+var services = builder.Services;
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+services.AddControllersWithViews();
+services.AddSingleton<StringBuilderTextEmailRenderer>();
+#if DEBUG
+services.AddTransient<FluidEmailRenderer>();
+#else
+services.AddSingleton<FluidEmailRenderer>();
+#endif
 
+services.AddTransient(_ => RazorEngineService.Create());
+services.AddTransient<RazorEngineNetCoreEmailRenderer>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
