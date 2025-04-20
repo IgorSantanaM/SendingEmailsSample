@@ -11,7 +11,8 @@ public class EmailsController(
 	StringBuilderTextEmailRenderer sbRenderer,
 	FluidEmailRenderer fluid,
     RazorEngineNetCoreEmailRenderer razorEmailRenderer,
-    RazorComponentHtmlEmailRenderer rchEmailRenderer
+    RazorComponentHtmlEmailRenderer rchEmailRenderer,
+    SmtpSettings smtpSettings
     ) : Controller {
 
 	
@@ -73,10 +74,15 @@ public class EmailsController(
 
         message.Body = bb.ToMessageBody();
         using var smtp = new SmtpClient();
-        await smtp.ConnectAsync("localhost", 1025); 
+        await smtp.ConnectAsync(smtpSettings.Host, smtpSettings.Port); 
+        if(smtpSettings.UserName != null)
+        {
+            await smtp.AuthenticateAsync(smtpSettings.UserName, smtpSettings.Password);
+        }
         await smtp.SendAsync(message);
         await smtp.DisconnectAsync(true);
 
         return Content($"Mail sent to {order.CustomerEmail}");
     }
+
 }

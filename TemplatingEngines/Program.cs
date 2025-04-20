@@ -2,7 +2,14 @@ using RazorEngine.Templating;
 using TemplatingEngines.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var smtpSettings = builder.Configuration.GetRequiredSection("Smtp").Get<SmtpSettings>()
+	?? throw new Exception("Smtp settings not found in configuration.");
+
 var services = builder.Services;
+
+services.AddSingleton(smtpSettings);
+
 // Add services to the container.
 services.AddControllersWithViews();
 
