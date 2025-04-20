@@ -1,6 +1,6 @@
 namespace TemplatingEngines.Services;
 
-public enum HtmlRenderer {
+public enum HtmlRendererEnum {
 	Fluid,
 	RazorEngine,
 	RazorComponent,

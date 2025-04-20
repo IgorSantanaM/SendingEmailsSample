@@ -1,3 +1,5 @@
+using TemplatingEngines.Common;
+
 namespace TemplatingEngines.Services;
 
 public interface IRenderHtmlEmails {

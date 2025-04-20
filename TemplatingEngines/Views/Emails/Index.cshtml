@@ -1,3 +1,4 @@
+@using TemplatingEngines.Common
 @using TemplatingEngines.Services
 @model List<Order>
 
@@ -19,7 +20,7 @@
 	<form asp-controller="Emails" asp-action="Send" method="post">
 		<input type="hidden" name="id" value="@order.OrderId"/>
 		Bcc: <input type="email" name="bcc" value="alice@example.com" placeholder="email"/>
-		<select name="renderer" asp-items="Html.GetEnumSelectList<HtmlRenderer>()">
+		<select name="renderer" asp-items="Html.GetEnumSelectList<HtmlRendererEnum>()">
 		</select>
 		<input type="submit" value="Send"/>
 	</form>

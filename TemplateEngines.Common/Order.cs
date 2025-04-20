@@ -1,4 +1,4 @@
-namespace TemplatingEngines.Models;
+namespace TemplatingEngines.Common;
 
 public class Order {
 	private const decimal TAX_RATE = 0.2m;

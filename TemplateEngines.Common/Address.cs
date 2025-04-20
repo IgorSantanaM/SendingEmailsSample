@@ -1,4 +1,4 @@
-namespace TemplatingEngines.Models;
+namespace TemplatingEngines.Common;
 
 public class Address() {
 	public Address(string addressLine1, string addressLine2, string city, string country, string postalCode) : this() {

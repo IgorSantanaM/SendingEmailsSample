@@ -1,4 +1,4 @@
-namespace TemplatingEngines.Models;
+namespace TemplatingEngines.Common;
 
 public class OrderItem() {
 	public OrderItem(string name, int quantity, decimal unitPrice) : this() {

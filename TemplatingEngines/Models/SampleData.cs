@@ -1,3 +1,5 @@
+using TemplatingEngines.Common;
+
 namespace TemplatingEngines.Models;
 
 public class SampleData {
