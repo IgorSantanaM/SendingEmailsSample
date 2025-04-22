@@ -1,3 +1,4 @@
+using Mjml.Net;
 using RazorEngine.Templating;
 using TemplatingEngines.Services;
 
@@ -14,6 +15,8 @@ services.AddSingleton(smtpSettings);
 services.AddControllersWithViews();
 
 services.AddSingleton<StringBuilderTextEmailRenderer>();
+services.AddTransient<MjmlRenderer>();
+services.AddTransient<MjmlEmailRenderer>();
  
 #if DEBUG
 services.AddTransient<FluidEmailRenderer>();

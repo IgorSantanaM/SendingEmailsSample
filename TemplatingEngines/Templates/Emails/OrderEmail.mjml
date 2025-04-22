@@ -1,162 +1,173 @@
 <mjml>
-  <mj-head>
-    <mj-attributes>
-      <mj-body background-color="#ccc" />
-      <mj-section background-color="#fff" />
-      <mj-text font-family="Nunito, Arial, sans-serif" />
-    </mj-attributes>
-    <mj-font name="Nunito" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" />
-     <mj-style>
-      p {
-        line-height: 1.4em;
-      }
+	<mj-head>
+		<mj-attributes>
+			<mj-body background-color="#ccc" />
+			<mj-section background-color="#fff" />
+			<mj-text font-family="Nunito, Arial, sans-serif" />
+		</mj-attributes>
+		<mj-font name="Nunito" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" />
 
-      th.qty {
-        min-width: 3em;
-      }
+		<mj-style inline ="inline">
+			th.qty,
+			td.qty,
+			th.price,
+			td.price {
+			text-align: right;
+			}
+		</mj-style>
+		<mj-style>
+			p {
+			line-height: 1.4em;
+			}
 
-      th.price {
-        min-width: 6em;
-      }
+			th.qty {
+			min-width: 3em;
+			}
 
-      th.qty,
-      td.qty,
-      th.price,
-      td.price {
-        text-align: right;
-      }
+			th.price {
+			min-width: 6em;
+			}
 
-      table {
-        width: 100%;
-      }
+			th.qty,
+			td.qty,
+			th.price,
+			td.price {
+			text-align: right;
+			}
 
-      th,
-      td {
-        text-align: left;
-        padding: 8px 0;
-      }
+			table {
+			width: 100%;
+			}
 
-      tr.total {
-        font-weight: bold;
-      }
-    </mj-style>
-  </mj-head>
-  <mj-body>
-    <mj-section background-color="#900">
-      <mj-column width="40%">
-        <mj-image align="left"
-         src="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.png"
-         srcset="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.svg"
+			th,
+			td {
+			text-align: left;
+			padding: 8px 0;
+			}
+
+			tr.total {
+			font-weight: bold;
+			}
+		</mj-style>
+	</mj-head>
+	<mj-body>
+		<mj-section background-color="#900">
+			<mj-column width="40%">
+				<mj-image align="left"
+				 src="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.png"
+				 srcset="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.svg"
          />
-      </mj-column>
-      <mj-column vertical-align="bottom" width="60%">
-        <mj-text font-size="24px" color="#fff" align="right">
-          Order Confirmation
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column>
-        <mj-text>
-          <p>Hi David Evans,</p>
-          <p>
-            Thanks for ordering from Ray’s Music Exchange.
-            Your order’s being picked and will be shipped as soon as it’s ready
-          </p>
-          <p>
-            <strong>Order #: AB123</strong>
-          </p>
-          <p>
-            To track the status of your order,
-            <a href="https://raysmusic.exchange/orders/ab123">click here</a>
-          </p>
-          <h4>Order Summary</h4>
-          <table>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th class="qty" align="right">Qty</th>
-                <th class="price" align="right">Unit Price</th>
-                <th class="price" align="right">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Fender Stratocaster US Player Edition</td>
-                <td class="qty" align="right">1</td>
-                <td class="price" align="right">£799.00</td>
-                <td class="price" align="right">£799.00</td>
-              </tr>
-              <tr>
-                <td>VOX AC30 Custom with Celestion Greenback Speakers</td>
-                <td class="qty" align="right">2</td>
-                <td class="price" align="right">£949.00</td>
-                <td class="price" align="right">£1898.00</td>
-              </tr>
-              <tr>
-                <td>Dunlop EP103 Echoplex Delay Pedal</td>
-                <td class="qty" align="right">1</td>
-                <td class="price" align="right">£229.00</td>
-                <td class="price" align="right">£229.00</td>
-              </tr>
-              <tr>
-                <td>Ernie Ball Regular Slinky Guitar Strings</td>
-                <td class="qty" align="right">3</td>
-                <td class="price" align="right">£7.99</td>
-                <td class="price" align="right">£23.97</td>
-              </tr>
-              <tr>
-                <td colspan="4">
-                  <hr />
-                </td>
-              </tr>
-              <tr class="subtotal">
-                <td colspan="3">Subtotal</td>
-                <td class="price" align="right">£2949.97</td>
-              </tr>
-              <tr>
-                <td colspan="3">VAT Sales Tax @ 20%</td>
-                <td class="price" align="right">£589.99</td>
-              </tr>
-              <tr>
-                <td colspan="3">Shipping</td>
-                <td class="price" align="right">£12.99</td>
-              </tr>
-              <tr>
-                <td colspan="4">
-                  <hr />
-                </td>
-              </tr>              <tr class="total">
-                <td colspan="3">Total</td>
-                <td class="price" align="right">£3552.95</td>
-              </tr>
-            </tbody>
-          </table>
-          <p><strong>Paid by credit card - thank you!</strong>
-          </p>
-          <p>Any questions or problems with your order, just reply to this email.</p>
-          <p>Thanks, and have a great day.</p>
-          <p>
-            <em>Ray's Music Exchange</em>
-          </p>
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section background-color="#000">
-      <mj-column>
-        <mj-text color="#fff" font-size="12px" align="center">
-          <p>Ray's Music Exchange • London • Berlin • Calumet City</p>
-          <p>
-            <a href="#">About Us</a>
-            <a href="#">FAQ</a>
-            <a href="#">Delivery</a>
-            <a href="#">Returns</a>
-            <a href="#">Contact</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-          </p>
-        </mj-text>
-      </mj-column>
-    </mj-section>
-  </mj-body>
+			</mj-column>
+			<mj-column vertical-align="bottom" width="60%">
+				<mj-text font-size="24px" color="#fff" align="right">
+					Order Confirmation
+				</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section>
+			<mj-column>
+				<mj-text>
+					<p>Hi David Evans,</p>
+					<p>
+						Thanks for ordering from Ray’s Music Exchange.
+						Your order’s being picked and will be shipped as soon as it’s ready
+					</p>
+					<p>
+						<strong>Order #: AB123</strong>
+					</p>
+					<p>
+						To track the status of your order,
+						<a href="https://raysmusic.exchange/orders/ab123">click here</a>
+					</p>
+					<h4>Order Summary</h4>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th class="qty" align="right">Qty</th>
+								<th class="price" align="right">Unit Price</th>
+								<th class="price" align="right">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Fender Stratocaster US Player Edition</td>
+								<td class="qty" align="right">1</td>
+								<td class="price" align="right">£799.00</td>
+								<td class="price" align="right">£799.00</td>
+							</tr>
+							<tr>
+								<td>VOX AC30 Custom with Celestion Greenback Speakers</td>
+								<td class="qty" align="right">2</td>
+								<td class="price" align="right">£949.00</td>
+								<td class="price" align="right">£1898.00</td>
+							</tr>
+							<tr>
+								<td>Dunlop EP103 Echoplex Delay Pedal</td>
+								<td class="qty" align="right">1</td>
+								<td class="price" align="right">£229.00</td>
+								<td class="price" align="right">£229.00</td>
+							</tr>
+							<tr>
+								<td>Ernie Ball Regular Slinky Guitar Strings</td>
+								<td class="qty" align="right">3</td>
+								<td class="price" align="right">£7.99</td>
+								<td class="price" align="right">£23.97</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<hr />
+								</td>
+							</tr>
+							<tr class="subtotal">
+								<td colspan="3">Subtotal</td>
+								<td class="price" align="right">£2949.97</td>
+							</tr>
+							<tr>
+								<td colspan="3">VAT Sales Tax @ 20%</td>
+								<td class="price" align="right">£589.99</td>
+							</tr>
+							<tr>
+								<td colspan="3">Shipping</td>
+								<td class="price" align="right">£12.99</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<hr />
+								</td>
+							</tr>
+							<tr class="total">
+								<td colspan="3">Total</td>
+								<td class="price" align="right">£3552.95</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						<strong>Paid by credit card - thank you!</strong>
+					</p>
+					<p>Any questions or problems with your order, just reply to this email.</p>
+					<p>Thanks, and have a great day.</p>
+					<p>
+						<em>Ray's Music Exchange</em>
+					</p>
+				</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section background-color="#000">
+			<mj-column>
+				<mj-text color="#fff" font-size="12px" align="center">
+					<p>Ray's Music Exchange • London • Berlin • Calumet City</p>
+					<p>
+						<a href="#">About Us</a>
+						<a href="#">FAQ</a>
+						<a href="#">Delivery</a>
+						<a href="#">Returns</a>
+						<a href="#">Contact</a>
+						<a href="#">Terms</a>
+						<a href="#">Privacy</a>
+					</p>
+				</mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
 </mjml>

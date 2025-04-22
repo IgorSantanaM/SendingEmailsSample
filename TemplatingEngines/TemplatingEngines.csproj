@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="fluid.core" Version="2.22.0" />
     <PackageReference Include="mailkit" Version="4.11.0" />
+    <PackageReference Include="mjml.net" Version="4.8.0" />
+    <PackageReference Include="mjml.net.postprocessors" Version="4.8.0" />
     <PackageReference Include="razorengine.netcore" Version="3.1.0" />
   </ItemGroup>
 
