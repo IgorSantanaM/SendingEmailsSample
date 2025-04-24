@@ -17,4 +17,4 @@ public class RazorEngineNetCoreEmailRenderer(IRazorEngineService engine) : IRend
         engine.AddTemplate(TEMPLATE_PATH, File.ReadAllText(TEMPLATE_PATH));
         engine.Compile(TEMPLATE_PATH, typeof(Order));
     }       
-}
+} 

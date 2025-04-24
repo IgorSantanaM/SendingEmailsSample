@@ -1,0 +1,148 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-body background-color="#ccc" />
+      <mj-section background-color="#fff" />
+      <mj-text font-family="Nunito, Arial, sans-serif" />
+    </mj-attributes>
+    <mj-font name="Nunito" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" />
+    <mj-style>
+      p {
+      line-height: 1.4em;
+      }
+
+      th.qty {
+      min-width: 3em;
+      }
+
+      th.price {
+      min-width: 6em;
+      }
+
+      th.qty,
+      td.qty,
+      th.price,
+      td.price {
+      text-align: right;
+      }
+
+      table {
+      width: 100%;
+      }
+
+      th,
+      td {
+      text-align: left;
+      padding: 8px 0;
+      }
+
+      tr.total {
+      font-weight: bold;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#900">
+      <mj-column width="40%">
+        <mj-image align="left"
+         src="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.png"
+         srcset="https://raysmusic.exchange/images/rays-music-exchange-logotype-white.svg"
+         />
+      </mj-column>
+      <mj-column vertical-align="bottom" width="60%">
+        <mj-text font-size="24px" color="#fff" align="right">
+          Order Confirmation
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <p>Hi @Model.CustomerName,</p>
+          <p>
+            Thanks for ordering from Ray’s Music Exchange.
+            Your order’s being picked and will be shipped as soon as it’s ready
+          </p>
+          <p>
+            <strong>Order #: @Model.OrderId</strong>
+          </p>
+          <p>
+            To track the status of your order,
+            <a href="https://raysmusic.exchange/orders/@Model.OrderId">click here</a>.
+          </p>
+          <h2>Order Summary</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th class="qty" align="right">Qty</th>
+                <th class="price" align="right">Unit Price</th>
+                <th class="price" align="right">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach (var item in Model.Items) {
+              <tr>
+                <td>@item.Name</td>
+                <td align="right">@item.Quantity</td>
+                <td class="price" align="right">£@item.UnitPrice.ToString("0.00")</td>
+                <td class="price" align="right">£@item.Total.ToString("0.00")</td>
+              </tr>
+              }
+              <tr>
+                <td colspan="4">
+                  <hr />
+                </td>
+              </tr>
+              <tr class="subtotal">
+                <td colspan="3">Subtotal</td>
+                <td class="price" align="right">£@Model.Subtotal.ToString("0.00")</td>
+              </tr>
+              <tr>
+                <td colspan="3">VAT Sales Tax @@ 20%</td>
+                <td class="price" align="right">£@Model.TaxAmount.ToString("0.00")</td>
+              </tr>
+              <tr>
+                <td colspan="3">Shipping</td>
+                <td class="price" align="right">£@Model.ShippingCost.ToString("0.00")</td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <hr />
+                </td>
+              </tr>
+              <tr class="total">
+                <td colspan="3">Total</td>
+                <td class="price" align="right">£@Model.TotalCost.ToString("0.00")</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <strong>Paid by credit card - thank you!</strong>
+          </p>
+          <p>Any questions or problems with your order, just reply to this email.</p>
+          <p>Thanks, and have a great day.</p>
+          <p>
+            <em>Ray's Music Exchange</em>
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000">
+      <mj-column>
+        <mj-text color="#fff" font-size="12px" align="center">
+          <p>Ray's Music Exchange • London • Berlin • Calumet City</p>
+          <p>
+            <a href="#">About Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Delivery</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

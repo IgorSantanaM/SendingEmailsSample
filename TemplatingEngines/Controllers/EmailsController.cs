@@ -14,7 +14,7 @@ public class EmailsController(
     RazorEngineNetCoreEmailRenderer razorEmailRenderer,
     RazorComponentHtmlEmailRenderer rchEmailRenderer,
     SmtpSettings smtpSettings,
-    MjmlEmailRenderer mjml,
+    MjmlEmailRenderer mjml
     ) : Controller {
 
 	
@@ -84,7 +84,7 @@ public class EmailsController(
             TextBody = textBody,
         };
 
-        var logotypeEntity = await bb.Attachments.AddAsync("wwwroot}/rays-music-exchange-logotype-white");
+        var logotypeEntity = await bb.Attachments.AddAsync("wwwroot/rays-music-exchange-logotype-white");
         logotypeEntity.ContentId = MimeUtils.GenerateMessageId("raysmusic.exchange");
 
         htmlBody = htmlBody.Replace(
